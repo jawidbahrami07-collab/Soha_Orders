@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>فرم ثبت سفارش محصولات طبیعی نوره سها</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: "Vazirmatn", sans-serif;
+      background: linear-gradient(180deg, #f8fff9, #fff);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      min-height: 100vh;
+      color: #222;
+    }
+    .card {
+      width: 95%;
+      max-width: 480px;
+      background: #fff;
+      border-radius: 18px;
+      padding: 22px;
+      margin-top: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    }
+
+    .welcome {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 700;
+      color: #0b8a5f;
+      background: linear-gradient(90deg, #00c853, #b2ff59);
+      padding: 10px 15px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+    }
+
+    .poem {
+      text-align: center;
+      font-size: 14px;
+      font-style: italic;
+      color: #666;
+      border-bottom: 1px solid #0b8a5f;
+      border-top: 1px solid #0b8a5f;
+      padding: 10px 0;
+      margin-bottom: 25px;
+      letter-spacing: 1px;
+    }
+
+    .lead {
+      text-align: center;
+      font-size: 15px;
+      font-weight: 700;
+      color: #0b8a5f;
+      margin-top: 0;
+      margin-bottom: 18px;
+      line-height: 1.5;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .product {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .product span {
+      font-weight: 600;
+    }
+
+    .prod-row {
+      display: flex;
+      gap: 8px;
+    }
+
+    .prod-row input {
+      flex: 1;
+    }
+
+    .prod-row select {
+      width: 120px;
+    }
+
+    button {
+      width: 100%;
+      background: #0b8a5f;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      padding: 12px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #087a55;
+    }
+
+    .status {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: #777;
+      margin-top: 15px;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: #0b8a5f;
+    }
+
+    @media (max-width: 500px) {
+      .prod-row {
+        flex-direction: column;
+      }
+      .prod-row select {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <p class="welcome">به فرم ثبت سفارش محصولات طبیعی نوره سها خوش آمدید 💁</p>
+
+    <p class="poem">
+      جز توکل بر خدا سرمایه‌ای در کار نیست<br />
+      هر که را باشد توکل کار او دشوار نیست
+    </p>
+
+    <p class="lead">لطفاً اطلاعات خود و جزئیات سفارش را با دقت وارد کنید</p>
+
+    <form id="orderForm">
+      <label>👤 نام و نام خانوادگی</label>
+      <input type="text" name="name" required />
+
+      <label>📱 شماره تماس</label>
+      <input type="tel" name="phone" required placeholder="09xxxxxxxxx" />
+
+      <label>🏠 آدرس کامل</label>
+      <textarea name="address" rows="2" required></textarea>
+
+      <label>📨 کد پستی (اختیاری)</label>
+      <input type="text" name="postal_code" placeholder="در صورت نیاز وارد کنید" />
+
+      <h3 style="margin-top: 18px; font-size: 16px">🍵 محصولات طبیعی نوره سها</h3>
+
+      <div class="product">
+        <span>🟢 سها ۵۰۰ گرمی سبز</span>
+        <div class="prod-row">
+          <input type="number" name="saha500_qty" min="0" placeholder="تعداد" />
+          <select name="saha500_unit">
+            <option value="کارتن">کارتن</option>
+            <option value="بسته">بسته</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="product">
+        <span>🟡 سها ۲۵۰ گرمی ساشه</span>
+        <div class="prod-row">
+          <input type="number" name="saha250_qty" min="0" placeholder="تعداد" />
+          <select name="saha250_unit">
+            <option value="کارتن">کارتن</option>
+            <option value="بسته">بسته</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="product">
+        <span>📦 باکس پوچ یک کیلویی</span>
+        <div class="prod-row">
+          <input type="number" name="box1kg_qty" min="0" placeholder="تعداد" />
+          <select name="box1kg_unit">
+            <option value="کارتن">کارتن</option>
+            <option value="بسته">بسته</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="product">
+        <span>✨ پاکت طلایی پنجره‌دار</span>
+        <div class="prod-row">
+          <input type="number" name="goldPack_qty" min="0" placeholder="تعداد" />
+          <select name="goldPack_unit">
+            <option value="کارتن">کارتن</option>
+            <option value="بسته">بسته</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="product">
+        <span>🤍 پاکت یک کیلویی ساده</span>
+        <div class="prod-row">
+          <input type="number" name="plainPack_qty" min="0" placeholder="تعداد" />
+          <select name="plainPack_unit">
+            <option value="کارتن">کارتن</option>
+            <option value="بسته">بسته</option>
+          </select>
+        </div>
+      </div>
+
+      <label>📝 توضیحات (اختیاری)</label>
+      <textarea name="note" rows="2" placeholder="مثلاً ارسال فوری یا زمان تحویل..."></textarea>
+
+      <button type="submit">📦 ثبت و ارسال سفارش</button>
+      <div id="status" class="status"></div>
+    </form>
+
+    <footer>
+      <a href="https://wa.me/989037122660" target="_blank">📞 تماس با پشتیبانی واتساپ</a>
+    </footer>
+  </div>
+
+  <script>
+  const form = document.getElementById("orderForm");
+  const statusBox = document.getElementById("status");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    statusBox.style.color = "black";
+    statusBox.textContent = "در حال ارسال سفارش...";
+
+    const data = Object.fromEntries(new FormData(form));
+
+    try {
+      // اگر سرور شما در دامنه/پورت متفاوت است، آدرس کامل را قرار دهید:
+      // const endpoint = "https://your-domain.com/api/order";
+      const endpoint = "/api/order";
+      const res = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      const json = await res.json();
+      if (json.ok) {
+        statusBox.style.color = "green";
+        statusBox.textContent = `✅ سفارش ثبت شد — کد سفارش: ${json.order_code}`;
+        form.reset();
+
+        if (json.download) {
+          const a = document.createElement("a");
+          a.href = json.download;
+          a.textContent = "⤓ دانلود اکسل سفارش‌ها";
+          a.style.display = "block";
+          a.style.marginTop = "8px";
+          a.target = "_blank";
+          statusBox.appendChild(a);
+        }
+      } else {
+        statusBox.style.color = "orange";
+        statusBox.textContent = "⚠️ خطا: " + (json.message || json.error || "خطا در ثبت سفارش");
+      }
+    } catch (err) {
+      statusBox.style.color = "red";
+      statusBox.textContent = "❌ ارتباط با سرور برقرار نشد.";
+      console.error(err);
+    }
+  });
+</script>
+
+
+</body>
+</html>
